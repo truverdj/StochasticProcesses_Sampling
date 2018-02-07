@@ -310,7 +310,7 @@ grid.arrange(
 )
 ```
 
-```{r expAcceptReject3, echo=FALSE}
+```{r expAcceptReject4, echo=FALSE}
 n.sim = 10000
 lwr = 4
 x = seq(lwr,5,length.out = 1000)
