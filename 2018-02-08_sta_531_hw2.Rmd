@@ -197,7 +197,7 @@ plot.list = list()
 i = 1
 set.seed(2018)
 lwr = 0
-lambda = c(.5,.75,1,1.5,2,2.5,3,4)
+lambda = c(1,2,3,4)
 for (l in lambda){
   pi.x = dnorm(x,mean = 0,sd = 1)
   g.x = dexp(x, l)
@@ -214,18 +214,14 @@ for (l in lambda){
   i = i + 1
 }
 ```
-
-##### Results on [0, inf)
+\newpage
+Results on [0, inf)
 
 `ggplot` always plots densities so that they interate to 1, but we only have half the normal distribution, so we multiply it by 2 so as to better evaluate the fit. It seems $\lambda = 1$ has the best performance.
 
 ```{r, echo=FALSE, cache=TRUE}
 grid.arrange(
   plot.list[[1]], plot.list[[2]], plot.list[[3]], plot.list[[4]],
-  ncol = 2
-)
-grid.arrange(
-  plot.list[[5]], plot.list[[6]], plot.list[[7]], plot.list[[8]],
   ncol = 2
 )
 ```
@@ -237,7 +233,7 @@ x = seq(lwr,5,length.out = 1000)
 plot.list = list()
 i = 1
 set.seed(2018)
-lambda = c(.5,.75,1,1.5,2,2.5,3,4)
+lambda = c(1,2,3,4)
 for (l in lambda){
   pi.x = dnorm(x,mean = 0,sd = 1)
   g.x = dexp(x, l)
@@ -254,18 +250,14 @@ for (l in lambda){
   i = i + 1
 }
 ```
-
-##### Results on [1, inf)
+\newpage 
+Results on [1, inf)
 
 It seems $\lambda = 3$ has the best performance.
 
 ```{r, echo=FALSE, cache=TRUE}
 grid.arrange(
   plot.list[[1]], plot.list[[2]], plot.list[[3]], plot.list[[4]],
-  ncol = 2
-)
-grid.arrange(
-  plot.list[[5]], plot.list[[6]], plot.list[[7]], plot.list[[8]],
   ncol = 2
 )
 ```
@@ -277,7 +269,7 @@ x = seq(lwr,5,length.out = 1000)
 plot.list = list()
 i = 1
 set.seed(2018)
-lambda = c(.5,.75,1,1.5,2,2.5,3,4)
+lambda = c(1,2,3,4)
 for (l in lambda){
   pi.x = dnorm(x,mean = 0,sd = 1)
   g.x = dexp(x, l)
@@ -294,18 +286,14 @@ for (l in lambda){
   i = i + 1
 }
 ```
-
-##### Results on [2, inf)
+\newpage
+Results on [2, inf)
 
 It seems $\lambda = 2$ has the best performance.
 
 ```{r, echo=FALSE, cache=TRUE}
 grid.arrange(
   plot.list[[1]], plot.list[[2]], plot.list[[3]], plot.list[[4]],
-  ncol = 2
-)
-grid.arrange(
-  plot.list[[5]], plot.list[[6]], plot.list[[7]], plot.list[[8]],
   ncol = 2
 )
 ```
@@ -317,7 +305,7 @@ x = seq(lwr,5,length.out = 1000)
 plot.list = list()
 i = 1
 set.seed(2018)
-lambda = c(.5,.75,1,1.5,2,2.5,3,4)
+lambda = c(1,2,3,4)
 for (l in lambda){
   pi.x = dnorm(x,mean = 0,sd = 1)
   g.x = dexp(x, l)
@@ -334,18 +322,14 @@ for (l in lambda){
   i = i + 1
 }
 ```
-
-##### Results on [4, inf)
+\newpage
+Results on [4, inf)
 
 Honestly, we can't tell anything about performance this far into the tails.
 
 ```{r, echo=FALSE, cache=TRUE}
 grid.arrange(
   plot.list[[1]], plot.list[[2]], plot.list[[3]], plot.list[[4]],
-  ncol = 2
-)
-grid.arrange(
-  plot.list[[5]], plot.list[[6]], plot.list[[7]], plot.list[[8]],
   ncol = 2
 )
 ```
